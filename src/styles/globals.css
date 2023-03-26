@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+svg[fill="currentColor"] path {
+  fill: currentColor;
+}
+
+
+@layer base{
+  body{
+    @apply bg-black text-white
+  }
+
+  h1 {
+    @apply text-center font-default text-h1 font-medium;
+  }
+
+  h2 {
+    @apply font-default text-h2 font-medium;
+  }
+
+  h3 {
+    @apply font-default text-h3 font-medium;
+  }
+
+  p,
+  .p {
+    /*body*/
+    @apply font-default text-body text-white;
+  }
+
+  span,
+  .span {
+    /*body2*/
+    @apply font-default text-body2 text-white;
+  }
+
+  small {
+    @apply font-default text-small;
+  }
+}
+
+@layer components {
+  .loader {
+    @apply h-4 w-4 shadow-[0_0_2em_currentColor] bg-currentColor relative rounded-full;
+    transform: rotateX(-60deg) perspective(1000px);
+    @apply after:content-[""] after:block after:absolute after:top-0 after:left-0 after:w-[inherit] after:h-[inherit] after:rounded-full after:animate-loader
+     before:content-[""] before:block before:absolute before:top-0 before:left-0 before:w-[inherit] before:h-[inherit] before:rounded-full before:animate-loader;
+  }
+  .loader:after {
+    animation-delay: 0.4s;
+  }
+
+  .flex-center{
+    @apply flex justify-center items-center flex-col;
+  }
+
+  .textfield-bordered{
+    @apply placeholder:span focus:ring-transparent block w-full rounded border-[1px] border-darkGray bg-transparent py-2 text-white placeholder:text-gray focus:border-white focus:outline-none;
+  }
+
+  .textfield-underlined{
+    @apply p block w-full appearance-none border-0 border-b-[1px] border-gray bg-transparent py-2.5 px-0 focus:border-white focus:outline-none focus:ring-0
+  }
+
+  .btn-base {
+    @apply flex items-center justify-center gap-2 font-default text-body font-medium text-white duration-300 sm:text-base [&>span]:text-currentColor;
+  }
+
+  .btn-bordered {
+    @apply btn-base h-[54px] rounded-[7px] border-2 border-white transition-all md:h-[46px] sm:h-[36px];
+  }
+}
