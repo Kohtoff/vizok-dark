@@ -1,10 +1,17 @@
 import React from 'react'
 
-type Props = {}
+const logoSizeMapper = {
+  default: 'text-[64px]',
+  small: 'text-[32px]'
+}
 
-const Logo = (props: Props) => {
+type Props = {
+  size?: keyof typeof logoSizeMapper;
+}
+
+const Logo = ({size = 'default'}: Props) => {
   return (
-    <h1 className='text-[64px] font-logo'>Vizok</h1>
+    <h1 className={`font-logo ${logoSizeMapper[size]}`}>Vizok</h1>
   )
 }
 

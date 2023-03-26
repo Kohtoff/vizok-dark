@@ -1,6 +1,7 @@
 import Button from '@/components/ui/Button';
 import Logo from '@/components/ui/Logo';
 import TextField from '@/components/ui/TextField';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -10,7 +11,7 @@ type FormData = {
   email: string;
 };
 
-const Signin = () => {
+export default function SigninPage() {
   const {
     handleSubmit,
     formState: { errors },
@@ -122,5 +123,4 @@ const Signin = () => {
     </>
   );
 };
-
-export default Signin;
+SigninPage.getLayout = (page: NextPage) => page;

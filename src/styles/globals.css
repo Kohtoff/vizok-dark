@@ -78,4 +78,8 @@ svg[fill="currentColor"] path {
   .btn-bordered {
     @apply btn-base h-[54px] rounded-[7px] border-2 border-white transition-all md:h-[46px] sm:h-[36px];
   }
+
+  .container{
+
+  }
 }

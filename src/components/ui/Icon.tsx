@@ -7,6 +7,8 @@ import Instagram from '@/assets/instagram-icon.svg';
 import Telegram from '@/assets/telegram-icon.svg';
 import Twitter from '@/assets/twitter-icon.svg';
 import Youtube from '@/assets/youtube-icon.svg';
+import Login from '@/assets/login-icon.svg';
+import Logout from '@/assets/logout-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
@@ -16,6 +18,8 @@ const iconMapper = {
   telegram: Telegram,
   twitter: Twitter,
   youtube: Youtube,
+  login: Login,
+  logout: Logout
 } as const;
 
 export const colorMapper = resolveConfig(tailwindConfig).theme

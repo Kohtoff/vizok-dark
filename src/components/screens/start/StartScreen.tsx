@@ -1,5 +1,6 @@
 import Lodaer from '@/components/ui/Lodaer'
 import Logo from '@/components/ui/Logo'
+import { NextPage } from 'next'
 import React from 'react'
 
 type Props = {}

@@ -1,11 +1,13 @@
+import { NextPage } from 'next'
 import React from 'react'
 
 type Props = {}
 
-const Signup = (props: Props) => {
+const SignupPage = (props: Props) => {
   return (
     <div>signup</div>
   )
 }
 
-export default Signup;
+SignupPage.getLayout = (page: NextPage) => page;
+export default SignupPage;
