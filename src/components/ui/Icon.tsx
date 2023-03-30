@@ -9,6 +9,10 @@ import Twitter from '@/assets/twitter-icon.svg';
 import Youtube from '@/assets/youtube-icon.svg';
 import Login from '@/assets/login-icon.svg';
 import Logout from '@/assets/logout-icon.svg';
+import Route from "@/assets/routes-icon.svg";
+import Ticket from "@/assets/ticket-icon.svg";
+import Timetable from "@/assets/timetable-icon.svg";
+import Wallet from "@/assets/wallet-icon.svg";
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
@@ -19,7 +23,11 @@ const iconMapper = {
   twitter: Twitter,
   youtube: Youtube,
   login: Login,
-  logout: Logout
+  logout: Logout,
+  route: Route,
+  ticket: Ticket,
+  timetable: Timetable,
+  wallet: Wallet
 } as const;
 
 export const colorMapper = resolveConfig(tailwindConfig).theme
