@@ -19,6 +19,7 @@ type Props = {
   variant?: keyof typeof variantMapper;
   iconColor?: keyof typeof colorMapper;
   color?: keyof typeof paletteMapper;
+  labelClassName?: string
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
@@ -27,20 +28,21 @@ const Button = ({
   icon,
   className,
   iconColor = 'currentColor',
+  labelClassName,
   color = 'white',
   ...props
 }: Props) => {
   return (
     <button
-      className={`${className ? className : ''} ${
+      className={`${
         variant === 'filled'
           ? variantMapper[variant] + ' ' + paletteMapper[color]
           : variantMapper[variant]
-      }`}
+      } ${className ? className : ''}`}
       {...props}
     >
       {icon && <Icon color={iconColor} name={icon} />}
-      {variant !== 'icon' && <span>{children}</span>}
+      {variant !== 'icon' && <span className={labelClassName}>{children}</span>}
     </button>
   );
 };

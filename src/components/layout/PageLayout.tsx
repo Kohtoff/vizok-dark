@@ -5,9 +5,9 @@ import Header from './Header'
 
 const PageLayout = ({children}: PropsWithChildren) => {
   return (
-    <div className='container min-h-[100vh]'>
+    <div className=' min-h-[100vh]'>
         <Header />
-        <main className='main'>
+        <main className='container'>
             {children}
         </main>
         <Footer />

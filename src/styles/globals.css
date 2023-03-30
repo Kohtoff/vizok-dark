@@ -32,7 +32,7 @@ svg[fill="currentColor"] path {
   }
 
   p,
-  .p {
+  .text-p {
     /*body*/
     @apply font-default text-body text-white;
   }
@@ -68,7 +68,11 @@ svg[fill="currentColor"] path {
   }
 
   .textfield-underlined{
-    @apply p block w-full appearance-none border-0 border-b-[1px] border-gray bg-transparent py-2.5 px-0 focus:border-white focus:outline-none focus:ring-0
+    @apply text-p block w-full appearance-none border-0 border-b-[1px] border-gray bg-transparent py-2.5 px-0 focus:border-white focus:outline-none focus:ring-0
+  }
+
+  .textfield-filled{
+    @apply bg-deepBlack duration-[.5s] ring-0 outline-1 outline-none focus:bg-opacity-30 rounded-lg bg-opacity-20 py-1 pl-2
   }
 
   .btn-base {
@@ -80,6 +84,6 @@ svg[fill="currentColor"] path {
   }
 
   .container{
-
+    @apply px-5 max-w-[100vw]
   }
 }

@@ -10,7 +10,7 @@ import React, {
   type Props = {
     name?: string;
     label?: string;
-    variant?: "bordered" | "underlined";
+    variant?: "bordered" | "underlined" | 'filled';
     icon?: IconNames;
     defaultValue?: string,
     value?: string,
@@ -67,6 +67,22 @@ import React, {
         </div>
       );
     },
+    filled: ({
+      className,
+      icon,
+      ...props
+    }) => {
+      return (
+        <div className='relative'>
+          {icon && (
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-[22px]">
+                <Icon className='w-5 h-5' name={icon} color="white" />
+              </div>
+            )}
+          <input className={`textfield-filled ${icon ? 'pl-14' : "pl-4"} ${className}`} {...props} />
+        </div>
+      )
+    }
   };
 
   const TextField = ({

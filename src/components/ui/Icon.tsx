@@ -9,16 +9,19 @@ import Twitter from '@/assets/twitter-icon.svg';
 import Youtube from '@/assets/youtube-icon.svg';
 import Login from '@/assets/login-icon.svg';
 import Logout from '@/assets/logout-icon.svg';
-import Route from "@/assets/routes-icon.svg";
-import Ticket from "@/assets/ticket-icon.svg";
-import Timetable from "@/assets/timetable-icon.svg";
-import Wallet from "@/assets/wallet-icon.svg";
+import Route from '@/assets/routes-icon.svg';
+import Ticket from '@/assets/ticket-icon.svg';
+import Timetable from '@/assets/timetable-icon.svg';
+import Wallet from '@/assets/wallet-icon.svg';
 import Settings from '@/assets/settings-icon.svg';
 import User from '@/assets/user-icon.svg';
 import ChevronLeft from '@/assets/chevron-left-icon.svg';
+import ChevronDown from '@/assets/chevron-down-icon.svg';
+import ChevronUpDown from '@/assets/chevron-up-down-icon.svg';
 import Card from '@/assets/card-icon.svg';
+import Flag from '@/assets/flag-icon.svg';
+import City from '@/assets/city-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
-
 
 const iconMapper = {
   apple: Apple,
@@ -36,11 +39,14 @@ const iconMapper = {
   settings: Settings,
   user: User,
   chevronLeft: ChevronLeft,
-  card: Card
+  chevronDown: ChevronDown,
+  chevronUpDown: ChevronUpDown,
+  card: Card,
+  flag: Flag,
+  city: City,
 } as const;
 
-export const colorMapper = resolveConfig(tailwindConfig).theme
-  ?.colors as Record<string, string>;
+export const colorMapper = resolveConfig(tailwindConfig).theme?.colors as Record<string, string>;
 
 export type IconNames = keyof typeof iconMapper;
 
