@@ -12,6 +12,8 @@ import React, {
     label?: string;
     variant?: "bordered" | "underlined";
     icon?: IconNames;
+    defaultValue?: string,
+    value?: string,
     onEnter?: (value: string | number | readonly string[]) => void;
   } & InputHTMLAttributes<HTMLInputElement>;
 
@@ -43,7 +45,7 @@ import React, {
     underlined: ({
       label,
       type,
-      placeholder = "Placeholder",
+      placeholder,
       value,
       onEnter,
       ...props
@@ -70,17 +72,17 @@ import React, {
   const TextField = ({
     variant = "bordered",
     onChange,
+    value,
     ...props
   }: Props) => {
-    const [value, setValue] = useState("");
+    console.log(value)
     const handleChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value);
         if (onChange) {
           onChange(event);
         }
       },
-      [onChange]
+      [onChange, value]
     );
     return variantMapper[variant]({
       ...props,

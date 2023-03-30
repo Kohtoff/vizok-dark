@@ -13,7 +13,12 @@ import Route from "@/assets/routes-icon.svg";
 import Ticket from "@/assets/ticket-icon.svg";
 import Timetable from "@/assets/timetable-icon.svg";
 import Wallet from "@/assets/wallet-icon.svg";
+import Settings from '@/assets/settings-icon.svg';
+import User from '@/assets/user-icon.svg';
+import ChevronLeft from '@/assets/chevron-left-icon.svg';
+import Card from '@/assets/card-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
+
 
 const iconMapper = {
   apple: Apple,
@@ -27,7 +32,11 @@ const iconMapper = {
   route: Route,
   ticket: Ticket,
   timetable: Timetable,
-  wallet: Wallet
+  wallet: Wallet,
+  settings: Settings,
+  user: User,
+  chevronLeft: ChevronLeft,
+  card: Card
 } as const;
 
 export const colorMapper = resolveConfig(tailwindConfig).theme

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Icon, IconNames } from '../ui/Icon';
 
@@ -7,7 +8,7 @@ const Footer = (props: Props) => {
   const navItems = [
     {
       name: 'Routes',
-      path: '/routes',
+      path: '/home',
       isActive: true,
       icon: 'route',
     },
@@ -28,24 +29,30 @@ const Footer = (props: Props) => {
     },
   ];
   return (
-    <footer className='absolute w-full bottom-0 px-5 '>
+    <footer className='absolute w-full bottom-0 px-5 bg-black '>
       <nav className='flex justify-between  h-[100px] overflow-hidden relative'>
         {navItems.map((navItem) => {
           return (
-            <div className='flex flex-col items-center justify-center shrink-0 cursor-pointer transition-all relative z-[2]'>
-              <Icon
-                color={navItem.isActive ? 'text-white' : "text-lightGray"}
-                className={`w-[24px] h-[24px]  duration-[.3s] ${
-                  navItem.isActive ? '-translate-y-[5px] ' : 'translate-y-[11px]'
-                }`}
-                name={navItem.icon as IconNames}
-              />
-              <span
-                className={`duration-[.3s] ${
-                  navItem.isActive ? 'opacity-1 translate-y-[5px]' : 'opacity-0 translate-x-[10px]'
-                }`}>
-                {navItem.name}
-              </span>
+            <div key={navItem.name}>
+              <Link
+                className='flex flex-col items-center justify-center shrink-0 cursor-pointer transition-all relative z-[2]'
+                href={navItem.path}>
+                <Icon
+                  color={navItem.isActive ? 'text-white' : 'text-lightGray'}
+                  className={`w-[24px] h-[24px]  duration-[.3s] ${
+                    navItem.isActive ? '-translate-y-[5px] ' : 'translate-y-[11px]'
+                  }`}
+                  name={navItem.icon as IconNames}
+                />
+                <span
+                  className={`duration-[.3s] ${
+                    navItem.isActive
+                      ? 'opacity-1 translate-y-[5px]'
+                      : 'opacity-0 translate-x-[10px]'
+                  }`}>
+                  {navItem.name}
+                </span>
+              </Link>
             </div>
           );
         })}

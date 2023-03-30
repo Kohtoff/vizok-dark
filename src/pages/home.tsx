@@ -1,4 +1,4 @@
-import Home from '@/components/screens/home/Home'
+import Home from '@/components/screens/home'
 import React from 'react'
 
 type Props = {}
