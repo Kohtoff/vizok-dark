@@ -1,6 +1,6 @@
-import HistoryItem from '@/components/ui/HistoryItem';
+import HistoryItem from '@/components/search/HistoryItem';
 import React from 'react';
-import SearchSection from './SearchSection';
+import SearchSection from '../../search/SearchSection';
 
 type Props = {};
 
@@ -13,7 +13,7 @@ const Home = (props: Props) => {
       <SearchSection user={user} />
       <section>
         <h3 className='text-center'>Search history</h3>
-        <div className='flex flex-col gap-y-8 max-h-[385px] overflow-y-scroll pb-[50px]'>
+        <div className='flex flex-col gap-y-8 max-h-[390px] overflow-y-scroll pb-[50px]'>
           <HistoryItem />
           <HistoryItem />
           <HistoryItem />

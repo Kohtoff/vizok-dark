@@ -1,5 +1,5 @@
 import getCurrentTime, { getCurrentHour, getCurrentMinute } from '@/utils/getCurrentTime';
-import React, { HTMLAttributes, MouseEvent, useEffect, useState } from 'react';
+import React, { HTMLAttributes, MouseEvent, useState } from 'react';
 import TimeColumn from './TimeColumn';
 
 type TimePickerProps = {

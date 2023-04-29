@@ -30,7 +30,7 @@ const Footer = (props: Props) => {
   ];
   return (
     <footer className='fixed w-full bottom-0 px-5 bg-black '>
-      <nav className='flex justify-between  h-[100px] overflow-hidden relative'>
+      <nav className='flex justify-between  h-[90px] overflow-hidden items-center relative'>
         {navItems.map((navItem) => {
           return (
             <div key={navItem.name}>

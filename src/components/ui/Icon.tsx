@@ -22,11 +22,15 @@ import Card from '@/assets/card-icon.svg';
 import Flag from '@/assets/flag-icon.svg';
 import City from '@/assets/city-icon.svg';
 import ArrowDown from '@/assets/arrow-down-icon.svg';
+import Bus from '@/assets/bus-icon.svg';
+import Train from '@/assets/train-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
   arrowDown: ArrowDown,
   apple: Apple,
+  bus: Bus,
+  train: Train,
   google: Google,
   instagram: Instagram,
   telegram: Telegram,

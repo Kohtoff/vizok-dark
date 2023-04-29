@@ -6,6 +6,7 @@ import { setFinishPoint, setStartPoint } from '@/ducks/trip.duck';
 import { useTrip } from '@/hooks/useTrip';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import Filters from './filter/Filters';
 
 type Props = {
   user: { city: string };
@@ -49,9 +50,7 @@ const SearchSection = ({ user }: Props) => {
             <Icon className='w-6' name='chevronUpDown' />
           </Button> */}
         <TimePicker />
-        <Button variant='default' className='py-1 h-auto px-1.5'>
-          Filter
-        </Button>
+        <Filters />
       </div>
     </section>
   );

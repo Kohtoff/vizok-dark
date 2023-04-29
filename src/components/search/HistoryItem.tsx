@@ -2,8 +2,8 @@ import { setFullDestionation } from '@/ducks/trip.duck';
 import { useTrip } from '@/hooks/useTrip';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import DestionaionCircle from './DestionaionCircle';
-import { Icon } from './Icon';
+import DestionaionCircle from '@/components/search/DestionaionCircle';
+import { Icon } from '../ui/Icon';
 
 type Props = {};
 
