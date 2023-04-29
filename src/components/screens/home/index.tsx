@@ -1,7 +1,4 @@
-import Header from '@/components/layout/Header';
-import Button from '@/components/ui/Button';
-import { Icon } from '@/components/ui/Icon';
-import TextField from '@/components/ui/TextField';
+import HistoryItem from '@/components/ui/HistoryItem';
 import React from 'react';
 import SearchSection from './SearchSection';
 
@@ -13,9 +10,15 @@ const Home = (props: Props) => {
   };
   return (
     <div className='space-y-[40px]'>
-      <SearchSection user={user}/>
+      <SearchSection user={user} />
       <section>
         <h3 className='text-center'>Search history</h3>
+        <div className='flex flex-col gap-y-8 max-h-[385px] overflow-y-scroll pb-[50px]'>
+          <HistoryItem />
+          <HistoryItem />
+          <HistoryItem />
+          <HistoryItem />
+        </div>
       </section>
     </div>
   );

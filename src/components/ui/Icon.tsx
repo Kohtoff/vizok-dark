@@ -21,9 +21,11 @@ import ChevronUpDown from '@/assets/chevron-up-down-icon.svg';
 import Card from '@/assets/card-icon.svg';
 import Flag from '@/assets/flag-icon.svg';
 import City from '@/assets/city-icon.svg';
+import ArrowDown from '@/assets/arrow-down-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
+  arrowDown: ArrowDown,
   apple: Apple,
   google: Google,
   instagram: Instagram,

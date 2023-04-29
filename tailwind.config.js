@@ -11,6 +11,24 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        fade: {
+          "0%":{
+            opacity: .3
+
+          },
+          "100%":{
+            opacity: 1
+          }
+        },
+        enterDown: {
+          "0%":{
+            transform: "translateY(100vh)",
+
+          },
+          "100%":{
+            transform: "translateY(0px)",
+          }
+        },
         loader: {
           '0%': {
             opacity: 1,
@@ -30,7 +48,9 @@ module.exports = {
         },
       },
       animation: {
-        loader: '1s loader ease-out infinite'
+        loader: '1s loader ease-out infinite',
+        enterDown : '.4s enterDown  ease-out',
+        fade : '.4s fade  ease-out'
       }
     },
     colors: {
@@ -42,7 +62,8 @@ module.exports = {
       lightGray: "#B5B5B5",
       darkGray: "#303030",
       red: "#B5373F",
-      deepBlack: '#000'
+      deepBlack: '#000',
+      blue: '#415A77'
     },
     fontFamily: {
       default: 'Poppins',

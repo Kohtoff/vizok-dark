@@ -9,14 +9,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-svg[fill="currentColor"] path {
+svg[fill='currentColor'] path {
   fill: currentColor;
 }
 
-
-@layer base{
-  body{
-    @apply bg-black text-white
+@layer base {
+  body {
+    @apply bg-black text-white;
   }
 
   h1 {
@@ -59,20 +58,20 @@ svg[fill="currentColor"] path {
     animation-delay: 0.4s;
   }
 
-  .flex-center{
+  .flex-center {
     @apply flex justify-center items-center flex-col;
   }
 
-  .textfield-bordered{
+  .textfield-bordered {
     @apply placeholder:span focus:ring-transparent block w-full rounded border-[1px] border-darkGray bg-transparent py-2 text-white placeholder:text-gray focus:border-white focus:outline-none;
   }
 
-  .textfield-underlined{
-    @apply text-p block w-full appearance-none border-0 border-b-[1px] border-gray bg-transparent py-2.5 px-0 focus:border-white focus:outline-none focus:ring-0
+  .textfield-underlined {
+    @apply text-p block w-full appearance-none border-0 border-b-[1px] border-gray bg-transparent py-2.5 px-0 focus:border-white focus:outline-none focus:ring-0;
   }
 
-  .textfield-filled{
-    @apply bg-deepBlack duration-[.5s] ring-0 outline-1 outline-none focus:bg-opacity-30 rounded-lg bg-opacity-20 py-1 pl-2
+  .textfield-filled {
+    @apply bg-deepBlack duration-[.5s] ring-0 outline-1 outline-none focus:bg-opacity-30 rounded-lg bg-opacity-20 py-1 pl-2;
   }
 
   .btn-base {
@@ -83,7 +82,29 @@ svg[fill="currentColor"] path {
     @apply btn-base h-[54px] rounded-[7px] border-2 border-white transition-all md:h-[46px] sm:h-[36px];
   }
 
-  .container{
-    @apply px-5 max-w-[100vw]
+  .container {
+    @apply px-5 max-w-[100vw];
   }
+}
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .border-transparent-gradient {
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-image:
+    linear-gradient(
+      to bottom,
+      red,
+      rgba(0, 0, 0, 0)
+    ) 1 100%;  }
 }
