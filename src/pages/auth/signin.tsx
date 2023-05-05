@@ -1,10 +1,13 @@
 import Button from '@/components/ui/Button';
 import Logo from '@/components/ui/Logo';
 import TextField from '@/components/ui/TextField';
+import { login } from '@/ducks/auth.ducks';
+import AuthService from '@/services/auth.service';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
 type FormData = {
   password: string;
@@ -19,7 +22,10 @@ export default function SigninPage() {
   } = useForm({
     defaultValues: { password: '', email: '' },
   });
-  const onSubmit = (data: FormData) => console.log(data);
+  const dispatch = useDispatch();
+  const onSubmit = (data: FormData) => {
+    AuthService.login(data)
+  };
 
   return (
     <>

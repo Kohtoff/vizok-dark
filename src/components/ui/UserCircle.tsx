@@ -45,7 +45,7 @@ const UserCircle = (props: Props) => {
         )}
       </div>
       <Dropdown
-        className='bg-deepBlack'
+        className='bg-deepBlack z-50'
         items={dropdownItems}
         open={isDropdownOpen}
         setOpen={() => setDropdownOpen(!isDropdownOpen)}

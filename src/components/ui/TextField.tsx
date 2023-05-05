@@ -91,7 +91,6 @@ import React, {
     value,
     ...props
   }: Props) => {
-    console.log(value)
     const handleChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
         if (onChange) {

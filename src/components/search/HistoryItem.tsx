@@ -1,5 +1,5 @@
-import { setFullDestionation } from '@/ducks/trip.duck';
-import { useTrip } from '@/hooks/useTrip';
+import { setFullDestionation } from '@/ducks/trip.ducks';
+import { useTrip } from '@/hooks/useDucks';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import DestionaionCircle from '@/components/search/DestionaionCircle';

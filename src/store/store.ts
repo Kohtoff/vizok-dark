@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
-import tripReducer from "@/ducks/trip.duck"
+import tripReducer from "@/ducks/trip.ducks"
+import authReducer from '@/ducks/auth.ducks'
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
@@ -20,6 +21,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     trip: tripReducer,
+    auth: authReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

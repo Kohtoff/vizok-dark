@@ -12,15 +12,19 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  return Component.getLayout ? (
-    Component.getLayout(<Component {...pageProps} />)
-  ) : (
-    <Provider store={store}>
-      <PersistGate loading={<StartScreen />} persistor={persistor}>
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
-      </PersistGate>
-    </Provider>
+  return (
+    <>
+      <Provider store={store}>
+        <PersistGate loading={<StartScreen />} persistor={persistor}>
+          {Component.getLayout ? (
+            Component.getLayout(<Component {...pageProps} />)
+          ) : (
+            <PageLayout>
+              <Component {...pageProps} />
+            </PageLayout>
+          )}
+        </PersistGate>
+      </Provider>
+    </>
   );
 }
