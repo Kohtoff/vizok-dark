@@ -1,8 +1,13 @@
+import { logout } from '@/ducks/auth.ducks';
+import store from '@/store/store';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Dropdown, { DropdownItem } from './Dropdown';
 import { Icon } from './Icon';
+
+
 
 type Props = {};
 
@@ -25,7 +30,10 @@ const dropdownItems: DropdownItem[] = [
   {
     title: 'Logout',
     href: '/logout',
-    icon: 'logout'
+    icon: 'logout',
+    handler: () => {
+      store.dispatch(logout())
+    }
   },
 ];
 

@@ -24,7 +24,12 @@ const AuthService = {
     });
   },
 
-  async signup(payload: LoginPayload) {},
+  async signup(payload: LoginPayload & {phone: string}) {
+    await $login.post('/user/registration/', payload).then(res => {
+      const expiredAt = (jwtDecode(res.data.access) as DecodedToken).exp
+      store.dispatch(login({...res.data, expiredAt}));
+    })
+  },
 
   async logout() {
     store.dispatch(logout())

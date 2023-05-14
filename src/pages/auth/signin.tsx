@@ -5,11 +5,12 @@ import { login } from '@/ducks/auth.ducks';
 import AuthService from '@/services/auth.service';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-type FormData = {
+export type FormData = {
   password: string;
   email: string;
 };
@@ -22,9 +23,9 @@ export default function SigninPage() {
   } = useForm({
     defaultValues: { password: '', email: '' },
   });
-  const dispatch = useDispatch();
+  const router = useRouter()
   const onSubmit = (data: FormData) => {
-    AuthService.login(data)
+    AuthService.login(data).then(() => router.push('/home'))
   };
 
   return (
@@ -32,7 +33,7 @@ export default function SigninPage() {
       <div className='flex flex-col h-[100vh] pt-[100px] px-[24px]'>
         <Logo />
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2 className='text-center'>Sing In</h2>
+          <h2 className='text-center'>Sign In</h2>
           <div className='mt-[20px] mb-[30px] flex flex-col gap-[20px]'>
             <div>
               <Controller
