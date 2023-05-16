@@ -24,6 +24,7 @@ import City from '@/assets/city-icon.svg';
 import ArrowDown from '@/assets/arrow-down-icon.svg';
 import Bus from '@/assets/bus-icon.svg';
 import Train from '@/assets/train-icon.svg';
+import Search from '@/assets/search-icon.svg';
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
@@ -43,6 +44,7 @@ const iconMapper = {
   timetable: Timetable,
   wallet: Wallet,
   settings: Settings,
+  search: Search,
   user: User,
   chevronLeft: ChevronLeft,
   chevronDown: ChevronDown,

@@ -1,3 +1,4 @@
+import Map from '@/components/Map';
 import HistoryItem from '@/components/search/HistoryItem';
 import React from 'react';
 import SearchSection from '../../search/SearchSection';
@@ -10,15 +11,16 @@ const Home = (props: Props) => {
   };
   return (
     <div className='space-y-[40px]'>
-      <SearchSection user={user} />
-      <section>
+      <SearchSection />
+      <section className='flex flex-col justify-center items-center'>
         <h3 className='text-center'>Search history</h3>
-        <div className='flex flex-col gap-y-8 max-h-[390px] overflow-y-scroll pb-[50px]'>
+         <div className='flex w-full flex-col gap-y-8 max-h-[52vh] overflow-y-scroll pb-[50px]'>
           <HistoryItem />
           <HistoryItem />
           <HistoryItem />
           <HistoryItem />
         </div>
+        {/* <Map /> */}
       </section>
     </div>
   );
