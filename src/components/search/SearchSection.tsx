@@ -12,12 +12,12 @@ import Filters from './filter/Filters';
 //   interface Window {google: any}
 // }
 
-const cityCoordsMockup = {
-  latMin: 37.708075, // Юго-западная граница города
-  lngMin: -122.513742, // Юго-западная граница города
-  latMax: 37.832416, // Северо-восточная граница города
-  lngMax: -122.365218, // Северо-восточная граница города
-};
+// const cityCoordsMockup = {
+//   latMin: 37.708075, // Юго-западная граница города
+//   lngMin: -122.513742, // Юго-западная граница города
+//   latMax: 37.832416, // Северо-восточная граница города
+//   lngMax: -122.365218, // Северо-восточная граница города
+// };
 
 type Props = {};
 const SearchSection = ({  }: Props) => {
@@ -34,13 +34,11 @@ const SearchSection = ({  }: Props) => {
     cache: 86400,
     requestOptions: {
       componentRestrictions: { country: 'ua' },
-    //   bounds: new google.maps.LatLngBounds(
-    //    new google.maps.LatLng(cityCoordsMockup.latMin, cityCoordsMockup.lngMin),
-    //    new google.maps.LatLng(cityCoordsMockup.latMax, cityCoordsMockup.lngMax)),
+      // sessionToken: process.env.GOOGLE_API_TOKEN as string
     }
   });
 
-  console.log(value, status);
+  console.log(value, status, data);
   const dispatch = useDispatch();
   return (
     <section className='space-y-[30px]'>

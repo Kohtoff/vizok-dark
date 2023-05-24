@@ -14,7 +14,7 @@ const Home = (props: Props) => {
       <SearchSection />
       <section className='flex flex-col justify-center items-center'>
         <h3 className='text-center'>Search history</h3>
-         <div className='flex w-full flex-col gap-y-8 max-h-[52vh] overflow-y-scroll pb-[50px]'>
+         <div className='flex w-full flex-col gap-y-8 max-h-[48vh] overflow-y-scroll pb-[11vh]'>
           <HistoryItem />
           <HistoryItem />
           <HistoryItem />

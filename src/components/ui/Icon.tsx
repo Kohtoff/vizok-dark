@@ -25,6 +25,7 @@ import ArrowDown from '@/assets/arrow-down-icon.svg';
 import Bus from '@/assets/bus-icon.svg';
 import Train from '@/assets/train-icon.svg';
 import Search from '@/assets/search-icon.svg';
+import Walk from "@/assets/walk-icon.svg";
 import tailwindConfig from '../../../tailwind.config.js';
 
 const iconMapper = {
@@ -52,6 +53,7 @@ const iconMapper = {
   card: Card,
   flag: Flag,
   city: City,
+  walk: Walk,
 } as const;
 
 export const colorMapper = resolveConfig(tailwindConfig).theme?.colors as Record<string, string>;

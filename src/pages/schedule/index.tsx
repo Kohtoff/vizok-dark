@@ -73,7 +73,7 @@ const HistoryItem = ({ data }: ItemProps) => {
       <Icon className='w-4 h-4' name={data.type === 'line' ? data.vehicleType : data.type} />
       {data.number ? (
         <>
-          <span className='bg-white text-black h-[25px] w-[30px] rounded-lg text-center'>
+          <span className='bg-white text-[17px] text-black h-[25px] w-[30px] rounded-lg text-center'>
             {data.number}
           </span>
           <Icon name='arrowDown' className='-rotate-90 w-5 h-5' color='gray' />

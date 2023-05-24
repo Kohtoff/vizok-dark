@@ -4,6 +4,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import DestionaionCircle from '@/components/search/DestionaionCircle';
 import { Icon } from '../ui/Icon';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -13,7 +14,7 @@ function HistoryItem({}: Props) {
   const handleClick = () => dispatch(setFullDestionation({start: 'Marshalla Govorova', finish: 'Shevchenko Av.'}));
 
   return (
-    <div className='space-y-2' onClick={handleClick}>
+    <Link href={`/route/?from=${trip.start}&to=${trip.finish}`} className='space-y-2' onClick={handleClick}>
       <span>Fr 21 April 2023</span>
       <div className='flex gap-x-3'>
         <div className='max-w-fit flex flex-col items-center gap-y-1'>
@@ -26,7 +27,7 @@ function HistoryItem({}: Props) {
           <span>Shevchenko Av.</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
