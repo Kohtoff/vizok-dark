@@ -1,5 +1,5 @@
 import { useAuth } from '@/hooks/useDucks';
-import AuthService from '@/services/auth.service';
+import AuthService from '@/modules/auth/services/auth.service';
 import getUnixTimestamp from '@/utils/getUnixTimestamp';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
