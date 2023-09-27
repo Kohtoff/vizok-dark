@@ -10,7 +10,8 @@ const StartScreen = (props: Props) => {
     <div className='h-[100vh] flex-center'>
       <Logo />
       <Lodaer className="mt-[100px]" />
-      <span className='absolute bottom-6'>Powered by @kohtoff</span>
+      <small className="text-gray mt-[20px]">Just small preporations for you {"<3"}</small>
+      {/* <span className='absolute bottom-6'>Powered by @kohtoff</span> */}
     </div>
   )
 }

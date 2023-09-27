@@ -29,7 +29,7 @@ const dropdownItems: DropdownItem[] = [
   },
   {
     title: 'Logout',
-    href: '/logout',
+    href: '/home',
     icon: 'logout',
     handler: () => {
       store.dispatch(logout())

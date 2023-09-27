@@ -1,7 +1,9 @@
 import RouteOption from '@/components/screens/route/RouteOption';
 import DestionaionCircle from '@/components/search/DestionaionCircle';
 import { Icon } from '@/components/ui/Icon';
+import { useTrip } from '@/hooks/useDucks';
 import { RouteOptionType } from '@/types/route';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -32,7 +34,9 @@ const options: RouteOptionType[] = [
 ];
 
 const RoutePage = (props: Props) => {
-  const { query } = useRouter();
+  const { query, asPath, pathname } = useRouter();
+  const trip = useTrip();
+  console.log(query)
   return (
     <div className=''>
       <div className='flex gap-x-3'>
@@ -42,14 +46,18 @@ const RoutePage = (props: Props) => {
           <DestionaionCircle colorMode='finish' />
         </div>
         <div className='flex flex-col justify-between'>
-          <span>{query.from}</span>
-          <span>{query.to}</span>
+          <span>{trip.start}</span>
+          <span>{trip.finish}</span>
         </div>
       </div>
       {/* <hr className='text-darkGray' /> */}
-      <div className='space-y-3 bg-gray h-[62vh] mt-[30px] pt-[20px] -mx-5 px-[20px]'>
+      <div className='flex flex-col gap-y-3 bg-darkBlue h-[62vh] mt-[30px] pt-[20px] -mx-5 px-[20px]'>
         {options.map((option) => {
-          return <RouteOption {...option} />;
+          return (
+            <Link href={`${pathname}/map?from=${trip.start}&to=${trip.finish}`}>
+              <RouteOption {...option} />
+            </Link>
+          );
         })}
       </div>
     </div>

@@ -29,7 +29,7 @@ const Footer = (props: Props) => {
     },
   ];
   return (
-    <footer className='fixed w-full bottom-0 px-5 bg-black '>
+    <footer className='fixed max-h-[80px] w-full bottom-0 px-5 bg-black '>
       <nav className='flex justify-between  h-[90px] overflow-hidden items-center relative'>
         {navItems.map((navItem) => {
           return (

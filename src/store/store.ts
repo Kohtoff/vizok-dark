@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
 import tripReducer from "@/ducks/trip.ducks"
 import authReducer from '@/ducks/auth.ducks'
+import ticketsReducer from "@/ducks/tickets.ducks";
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
@@ -13,6 +14,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import { ticketsSlice } from '@/ducks/tickets.ducks';
 
 const persistConfig = {
     key: 'root',
@@ -22,6 +24,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     trip: tripReducer,
     auth: authReducer,
+    tickets: ticketsReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

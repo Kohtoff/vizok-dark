@@ -1,5 +1,6 @@
 import getCurrentTime, { getCurrentHour, getCurrentMinute } from '@/utils/getCurrentTime';
 import React, { HTMLAttributes, MouseEvent, useState } from 'react';
+import Button from './Button';
 import TimeColumn from './TimeColumn';
 
 type TimePickerProps = {
@@ -40,6 +41,7 @@ const TimePicker = ({ name = 'timepicker', className, initialValue, onClick }: T
           '>
             <h2 className='text-center text-gray'>Pick your time</h2>
             <TimePickerSelection />
+          <Button className='bottom-4 bg-yellow2 text-black border-black left-8 right-8 absolute'>Apply</Button>
           </div>
         </div>
       )}
@@ -51,8 +53,7 @@ const TimePickerSelection = () => {
   return (
     <div className='flex justify-center relative border-y-2 border-transparent-gradient top-[30%] h-[45px] overflow-visible items-center gap-3 grow text-h1'>
       {/* <ValueWheel mode='hour' /> */}
-      <TimeColumn start={0} end={23} setValue={console.log} value={getCurrentHour()} />
-      :
+      <ValueWheel mode='hour' />      :
       <ValueWheel mode='minute' />
     </div>
   );

@@ -129,7 +129,7 @@ svg[fill='currentColor'] path {
 
   .ticket-uil {
 	@apply text-[30px] leading-[1];
-	
+
   }
 
 }
@@ -192,7 +192,8 @@ svg[fill='currentColor'] path {
 .checkbox-ticket:checked + label,
 .checkbox-ticket:not(:checked) + label{
 	position: relative;
-	width: 150px;
+	min-width: 150px;
+	width: 100%;
 	display: inline-block;
 	cursor: pointer;
 	padding: 50px 0;
@@ -213,8 +214,22 @@ svg[fill='currentColor'] path {
 	height: 100%;
 	z-index: -1;
 	display: block;
+}
+.checkbox-ticket-Default:checked + label:before,
+.checkbox-ticket-Default:not(:checked) + label:before{
 	background-image: linear-gradient(335deg, theme("colors.gray"), theme("colors.lightGray"));
 }
+
+.checkbox-ticket-Active:checked + label:before,
+.checkbox-ticket-Active:not(:checked) + label:before{
+	background-image: linear-gradient(335deg, theme("colors.blue"), theme("colors.white"));
+}
+
+.checkbox-ticket-Reduced:checked + label:before,
+.checkbox-ticket-Reduced:not(:checked) + label:before{
+	background-image: linear-gradient(335deg, theme("colors.yellow"), theme("colors.yellow2"));
+}
+
 .checkbox-ticket:not(:checked) + label:after{
 	content: '';
 	position: absolute;

@@ -1,0 +1,71 @@
+{
+    "tickets": [
+        {
+            "title": "Default",
+            "content": [
+                {
+                    "id": 1,
+                    "title": "Reduced",
+                    "price": 20,
+                    "discount": 50
+                },
+                {
+                    "id": 2,
+                    "title": "Default",
+                    "price": 20
+                },
+                {
+                    "id": 3,
+                    "title": "Season Tikcet",
+                    "price": 200,
+                    "validUntil": "20-09-2023"
+                }
+            ]
+        },
+        {
+            "title": "Reduced",
+            "description": "You must submit an appropriate document that confirms the right to discounted travel during the check of tickets",
+            "content": [
+                {
+                    "id": 4,
+                    "title": "Reduced",
+                    "price": 20,
+                    "discount": 50
+                },
+                {
+                    "id": 5,
+                    "title": "Default",
+                    "price": 20
+                },
+                {
+                    "id": 6,
+                    "title": "Season Tikcet",
+                    "price": 200,
+                    "validUntil": "20-09-2023"
+                }
+            ]
+        },
+        {
+            "title": "Active",
+            "content": [
+                {
+                    "id": 7,
+                    "title": "Reduced",
+                    "price": 20,
+                    "discount": 50
+                },
+                {
+                    "id": 8,
+                    "title": "Default",
+                    "price": 20
+                },
+                {
+                    "id": 9,
+                    "title": "Season Tikcet",
+                    "price": 200,
+                    "validUntil": "20-09-2023"
+                }
+            ]
+        }
+    ]
+}

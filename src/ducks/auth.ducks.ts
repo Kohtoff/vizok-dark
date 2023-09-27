@@ -1,17 +1,20 @@
 import { $login } from '@/api/interceptors';
 import { RootState } from '@/store/store';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import jwtDecode from 'jwt-decode';
 
 type State = {
   refresh: string;
   access: string;
   expiredAt: number | null | BigInt;
+  user: any | null;
 };
 
 const initialState: State = {
   refresh: '',
   access: '',
   expiredAt: null,
+  user: null
 };
 
 export const authSlice = createSlice({
@@ -22,6 +25,7 @@ export const authSlice = createSlice({
       state.access = payload.access;
       state.refresh = payload.refresh
       state.expiredAt = payload.expiredAt
+      state.user = jwtDecode(payload.access)
     },
 
     refresh: (state, { payload }) => {},

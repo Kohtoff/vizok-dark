@@ -20,6 +20,10 @@ export const tripSlice = createSlice({
         },
         setFinishPoint: (state, {payload}) => {
             state.finish = payload;
+        },
+
+        setPoint: (state, {payload}) => {
+            state[payload.key as 'start' | 'finish'] = payload.value
         }
     }
 })
@@ -28,6 +32,6 @@ const {reducer, actions} = tripSlice;
 
 export default reducer;
 
-export const {setFullDestionation, setStartPoint, setFinishPoint} = actions;
+export const {setFullDestionation, setStartPoint, setFinishPoint, setPoint} = actions;
 
 export const selectTrip = (rootState: RootState) => rootState.trip;
